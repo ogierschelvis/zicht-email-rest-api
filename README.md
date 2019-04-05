@@ -15,7 +15,7 @@ There's no need for complex transactions that need to be reversed.
 The NoSQL database I am most familiar with is MongoDB (also used in RocketChat). 
 So I chose that as data store.
 
-Furthermore I chose LoopBack to create my API, since it can easily create a RESTful API just from the CLI.
+Furthermore I chose the [LoopBack](https://loopback.io/) API framework to create my API, since it can easily create a RESTful API just from the CLI.
 
 ## Versioning
 
