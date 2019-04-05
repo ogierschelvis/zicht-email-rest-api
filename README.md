@@ -34,6 +34,7 @@ The NoSQL database I am most familiar with is MongoDB (also used in RocketChat).
 So I chose that as data store.
 
 Furthermore I chose the [LoopBack](https://loopback.io/) API framework to create my API, since it can easily create a RESTful API just from the CLI.
+Also it supports a user model with username and email attribute out of the box.
 
 ## Versioning
 
