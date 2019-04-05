@@ -4,6 +4,19 @@ This is a RESTful API for maintaining an list of names and email addresses
 
 ## Getting Started
 
+Set up node dependencies
+```
+npm install
+```
+
+Fire up API 
+```
+node .
+```
+
+API will be exposed on `http://localhost:3000` and can be browsed on `http://localhost:3000/explorer`
+
+
 ### Prerequisites
 
 For development you need Node.js, Robomongo (or Robo 3T) and make sure you have MongoDB server running 
