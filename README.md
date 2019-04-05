@@ -7,6 +7,11 @@ This is a RESTful API for maintaining an list of names and email addresses
 ### Prerequisites
 
 For development you need Node.js, Robomongo (or Robo 3T) and make sure you have MongoDB server running 
+Install LoopBack CLI (preferrably) globally using npm:
+
+```bash
+npm i -g loopback-cli
+```
 
 ### Choices
 
