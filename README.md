@@ -20,7 +20,7 @@ API will be exposed on `http://localhost:3000` and can be browsed on `http://loc
 ### Prerequisites
 
 For development you need Node.js, Robomongo (or Robo 3T) and make sure you have MongoDB server running 
-Install LoopBack CLI (preferrably) globally using npm:
+Install LoopBack CLI (preferrably) globally (so you can benefit from the `lb` command being in your `$PATH`) using npm:
 
 ```bash
 npm i -g loopback-cli
