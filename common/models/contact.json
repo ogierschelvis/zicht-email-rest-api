@@ -10,5 +10,6 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {},
+  "hidden": ["realm","emailVerified"]
 }
