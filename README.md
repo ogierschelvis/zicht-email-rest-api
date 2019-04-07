@@ -36,6 +36,15 @@ So I chose that as data store.
 Furthermore I chose the [LoopBack](https://loopback.io/) API framework to create my API, since it can easily create a RESTful API just from the CLI.
 Also it supports a user model with username and email attribute out of the box.
 
+## Documentation
+
+Documentation was created using Postman. And is available [here](https://documenter.getpostman.com/view/7171673/S1EJYgYk)
+
+## Suggestion for improvement
+
+The next thing I would take on is the Authorization aspect. Make users with roles and restrict their permissions and methods with Authorization tokens.
+Such functionality is already built-in with LoopBack, you just have to configure it properly.
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
