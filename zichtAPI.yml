@@ -70,50 +70,7 @@ paths:
             items:
               $ref: '#/definitions/Contact'
       deprecated: false
-  '/Contacts/{id}/exists':
-    get:
-      tags:
-        - Contact
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Contact.exists__get_Contacts_{id}_exists'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
   '/Contacts/{id}':
-    head:
-      tags:
-        - Contact
-      summary: Check whether a model instance exists in the data source.
-      operationId: 'Contact.exists__head_Contacts_{id}'
-      parameters:
-        - name: id
-          in: path
-          description: Model id
-          required: true
-          type: string
-          format: JSON
-      responses:
-        '200':
-          description: Request was successful
-          schema:
-            type: object
-            properties:
-              exists:
-                type: boolean
-      deprecated: false
     get:
       tags:
         - Contact
