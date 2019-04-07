@@ -1,0 +1,217 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: zicht-email-rest-api
+basePath: /api
+paths:
+  /Contacts:
+    post:
+      tags:
+        - Contact
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Contact.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contact'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contact'
+      deprecated: false
+    patch:
+      tags:
+        - Contact
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Contact.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contact'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contact'
+      deprecated: false
+    get:
+      tags:
+        - Contact
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Contact.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Contact'
+      deprecated: false
+  '/Contacts/{id}/exists':
+    get:
+      tags:
+        - Contact
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Contact.exists__get_Contacts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Contacts/{id}':
+    head:
+      tags:
+        - Contact
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Contact.exists__head_Contacts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Contact
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Contact.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contact'
+      deprecated: false
+    delete:
+      tags:
+        - Contact
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Contact.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Contact
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Contact.prototype.patchAttributes
+      parameters:
+        - name: id
+          in: path
+          description: Contact id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Contact'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contact'
+      deprecated: false
+tags:
+  - name: Contact
+consumes:
+  - application/json
+  - application/x-www-form-urlencoded
+  - application/xml
+  - text/xml
+produces:
+  - application/json
+  - application/xml
+  - text/xml
+  - application/javascript
+  - text/javascript
+definitions:
+  Contact:
+    properties:
+      username:
+        type: string
+      email:
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - email
+    additionalProperties: false
+  x-any:
+    properties: {}
+  ObjectID:
+    type: string
+    pattern: '^[a-fA-F\d]{24}$'
