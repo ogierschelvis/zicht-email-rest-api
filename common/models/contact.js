@@ -23,4 +23,5 @@ module.exports = function(Contact) {
   Contact.disableRemoteMethodByName('replace');
   Contact.disableRemoteMethodByName('replaceById');
   Contact.disableRemoteMethodByName('createChangeStream');
+  Contact.disableRemoteMethodByName('exists');
 };
